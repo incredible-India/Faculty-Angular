@@ -9,6 +9,7 @@ import { FileNotFoundComponent } from './components/file-not-found/file-not-foun
 import { ApiComponent } from './components/api/api.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,6 +17,7 @@ import { ApiComponent } from './components/api/api.component';
     HomescreenComponent,
     FileNotFoundComponent,
     ApiComponent,
+
  
 
   ],

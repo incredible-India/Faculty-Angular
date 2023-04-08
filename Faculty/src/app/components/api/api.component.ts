@@ -35,7 +35,7 @@ error:boolean =false;
             <td> ${this.userJsonData[i].id} </td>
             <td> ${this.userJsonData[i].node_id} </td>
             <td> ${this.userJsonData[i].type} </td>
-            <td> <a href='${this.userJsonData[i].url}'>Github Acc</a> </td>
+            <td> <a href='${this.userJsonData[i].html_url}' target="_blank">Github </a> </td>
            <td>  <img class='img-fluid' src='${this.userJsonData[i].avatar_url}' style="width:50px; height:50px;"> </td>
             </tr>`
       
