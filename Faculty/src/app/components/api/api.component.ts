@@ -17,7 +17,7 @@ error:boolean =false;
   constructor(private ApiService:DempAPIService) {
 
     this.ApiService.getGitUser().subscribe(data=>{
-      console.log([data]);
+
 
       if(navigator.onLine)
       {

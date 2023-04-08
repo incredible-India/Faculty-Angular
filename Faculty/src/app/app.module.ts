@@ -17,6 +17,7 @@ import { ApiComponent } from './components/api/api.component';
     HomescreenComponent,
     FileNotFoundComponent,
     ApiComponent,
+   
 
  
 
@@ -24,7 +25,8 @@ import { ApiComponent } from './components/api/api.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+
   ],
  
   

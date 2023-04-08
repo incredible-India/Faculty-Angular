@@ -16,7 +16,7 @@ const routes: Routes = [
 
 //for the student related things
 //lazy loading
-{path:"student",loadChildren:()=>import('./modules/student/student.module').then(mod=>mod.StudentModule)},
+{path:"student",loadChildren:()=>import('./student/student.module').then(mod=>mod.StudentModule)},
 
 
 //for the unknow route

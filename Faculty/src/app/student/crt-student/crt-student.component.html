@@ -1,0 +1,40 @@
+<div class="container mt-4 mx-auto shadow-lg" style="width: 500px;">
+
+<h3 class="text-center "> Student Registration</h3>
+  <form  [formGroup]="NewStudent" (ngSubmit)="studentInfoFromForm()" >
+
+    <div class="sm">
+        <label>Student Name</label>
+        <input type="text" formControlName="sname" class="form-control" name="sname">
+        <span *ngIf="sname && sname.invalid && sname.touched" class="text-danger">This Field is Invalid</span>
+    </div>
+
+    <div class="sm">
+        <label>Student Id</label>
+        <input type="number" formControlName="sid" class="form-control" name="sid">
+        <span *ngIf="sid && sid.invalid && sid.touched" class="text-danger">This Field is Invalid</span>
+    </div>
+
+
+    <div class="sm">
+        <label>Student Email</label>
+        <input type="email" formControlName="semail" class="form-control" name="semail">
+        <span *ngIf="semail && semail.invalid && semail.touched" class="text-danger">This Field is Invalid</span>
+    </div>
+
+
+    <div class="sm">
+        <label>Student Address</label>
+        <input type="text" formControlName="saddress" class="form-control" name="saddress">
+        <span *ngIf="saddress && saddress.invalid && saddress.touched" class="text-danger">This Field is Invalid</span>
+    </div>
+
+    <input type="submit" value="Register Student" class="btn mt-4 mb-4"  [disabled]="NewStudent.invalid" style="background-color: rgb(255,187,97);">
+
+
+  </form>
+
+
+
+
+</div>
