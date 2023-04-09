@@ -1,6 +1,8 @@
 <div class="container mt-4 mx-auto shadow-lg" style="width: 500px;">
 
 <h3 class="text-center "> Student Registration</h3>
+
+<p class="text-success" *ngIf="success"><b>*Student Addedd successfully...</b></p>
   <form  [formGroup]="NewStudent" (ngSubmit)="studentInfoFromForm()" >
 
     <div class="sm">
@@ -31,10 +33,12 @@
 
     <input type="submit" value="Register Student" class="btn mt-4 mb-4"  [disabled]="NewStudent.invalid" style="background-color: rgb(255,187,97);">
 
-
+    <a class="text-center container mb-4" href="/student/list">Stuedent List</a>
   </form>
 
 
 
 
+
 </div>
+

@@ -1,1 +1,32 @@
-<p>liststudent works!</p>
+
+<div class="container mt-4" *ngIf="nostudent">
+    <h1 class="no text-center">No Student Exist .. </h1> 
+   
+</div>
+
+
+<div class="container mt-4" >
+
+    <a href="/student/create">Add student</a>
+</div>
+
+
+<div class="container mt-4" *ngIf="nostudent==false">
+<table class="table table-striped">
+
+<thead>
+<tr>
+    <th>Name</th>
+    <th>Id</th>
+    <th>Email</th>
+    <th>Address</th>
+</tr>
+
+</thead>
+<tbody class="mytable">
+
+</tbody>    
+
+</table>
+
+</div>

@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import {FormControl,FormGroup,Validators} from "@angular/forms"
+//the the function has been written here realted to student service...
+import { StudentService,Student } from './../studentBasic';
 @Component({
   selector: 'app-crt-student',
   templateUrl: './crt-student.component.html',
@@ -9,7 +11,14 @@ import {FormControl,FormGroup,Validators} from "@angular/forms"
 
 export class CrtStudentComponent {
 
+   Student = new StudentService();
 
+  constructor(private studentService: StudentService) {}
+
+
+
+  success:boolean =false;
+  
   //her send the reactive form
 
   NewStudent = new FormGroup({
@@ -24,9 +33,28 @@ export class CrtStudentComponent {
   //form data will come here after submission
 
   studentInfoFromForm(){
-    console.log("helloform");
-    alert("hello")
-    console.log(this.NewStudent.value);
+    
+    //retriving the form data 
+    let info = this.NewStudent.value;
+
+    const data:Student = {
+      sname:info.sname,
+      sid:info.sid,
+      semail:info.semail,
+      saddress:info.saddress
+
+    }
+
+ 
+    //data saving in the aaray
+    // studentList.push(data);
+    this.studentService.addStudent(data);
+  
+    //clearing the form once it added
+    this.NewStudent.reset();
+    // once data saved show success message 
+    this.success = true;
+ 
     
   }
 
